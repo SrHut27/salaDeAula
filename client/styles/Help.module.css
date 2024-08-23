@@ -1,0 +1,102 @@
+.helpSection {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  .sectionTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .description a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .optionsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .optionCard {
+    background-color: #f0f4ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: left;
+  }
+  
+  .icon {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .cardDescription {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .featuresList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .featuresList li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .ctaButton {
+    background-color: #0c69b4;;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .ctaButton:hover {
+    background-color: #3546d1;
+  }
+  
+  @media (max-width: 768px) {
+    .optionsContainer {
+      flex-direction: column;
+    }
+  
+    .optionCard {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

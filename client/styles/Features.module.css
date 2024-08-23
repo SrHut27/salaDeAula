@@ -1,0 +1,121 @@
+.features_section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+  background: url("/images/features/background.png") no-repeat center center/cover;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.features_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  z-index: 10;
+  max-width: 1200px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.text_title {
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: "Jackpot", sans-serif;
+  line-height: 3rem;
+}
+
+.text_title_right {
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: "Jackpot", sans-serif;
+  line-height: 3rem;
+  text-align: right;
+}
+
+.column1_title {
+  font-size: 1.8rem;
+}
+
+.line1 {
+  font-size: 1.9rem;
+}
+
+.line2 {
+  font-size: 3rem;
+}
+
+.line3 {
+  font-size: 1.8rem;
+}
+
+.line4 {
+  font-size: 1.6rem;
+}
+
+.text_content {
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 10%;
+  text-align: left;
+}
+
+.text_content_right {
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 10%;
+  text-align: justify;
+  text-align: right;
+}
+
+.column_image {
+  margin-bottom: 15px;
+}
+
+.rounded_image {
+  border-radius: 15px;
+  border: 2px dotted white; /* Adiciona borda pontilhada branca */
+}
+
+@media (max-width: 768px) {
+  .features_content {
+      flex-direction: column;
+      align-items: center; /* Alinha tudo ao centro */
+  }
+
+  .column {
+      margin: 10px 0;
+      text-align: center; /* Alinha o texto ao centro */
+  }
+
+  .column_image {
+      width: 300px; /* Aumenta o tamanho da imagem */
+      margin: 0 auto 15px;
+  }
+
+  .rounded_image {
+      border-radius: 15px;
+      border: 2px dotted white; /* Mantém a borda pontilhada branca */
+  }
+}

@@ -1,0 +1,144 @@
+.posSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw 4vw;
+  flex-wrap: wrap;
+  background-color: #f0f4ff;
+}
+
+.leftContent, .rightContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftContent {
+  position: relative;
+  max-width: 100%;
+  padding: 2vw;
+}
+
+.backgroundImage {
+  width: 100%;
+  max-width: 400px;
+}
+
+.overlayImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36%;
+  max-width: 180px;
+}
+
+.rightContent {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.subtitle {
+  font-size: calc(10px + 0.5vw);
+  font-weight: bold;
+  color: #0c69b4;
+  opacity: 65%;
+  margin-bottom: 2vw;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title {
+  font-size: calc(20px + 1vw);
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 2vw;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.description {
+  font-size: calc(12px + 0.5vw);
+  color: #555;
+  margin-bottom: 2vw;
+  text-align: center;
+}
+
+.links {
+  font-size: calc(12px + 0.5vw);
+}
+
+.link {
+  color: #0c69b4;
+  opacity: 65%;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.link::after {
+  content: '→';
+  font-size: 1em;
+  margin-left: 8px;
+  transition: margin-left 0.3s ease;
+}
+
+.link:hover::after {
+  margin-left: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .posSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rightContent {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .overlayImage {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlayImage {
+    width: 25%;
+  }
+
+  .title {
+    font-size: calc(18px + 1vw);
+  }
+
+  .description {
+    font-size: calc(10px + 0.5vw);
+  }
+
+  .link {
+    font-size: calc(10px + 0.5vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .overlayImage {
+    width: 20%;
+  }
+
+  .title {
+    font-size: calc(16px + 1vw);
+  }
+
+  .description {
+    font-size: calc(8px + 0.5vw);
+  }
+
+  .link {
+    font-size: calc(8px + 0.5vw);
+  }
+}

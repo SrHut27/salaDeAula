@@ -5,11 +5,30 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'DMSans';
+    src: url('/fonts/DMSans-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .body {
     min-height: 100vh; 
-    background: radial-gradient(circle, #354c51, #0c0d11 60%);
+    background: url("/images/hero_background.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.heroKidContainer {
+    flex-shrink: 0;
+}
+
+.heroText {
+    margin-bottom: auto; 
 }
 
 .heroTexture {
@@ -63,7 +82,6 @@
 .white {
     background-color: rgba(255, 255, 255, 0.8);
 }
-
 .heroKidContainer {
     position: absolute;
     bottom: 0;
@@ -78,18 +96,6 @@
     align-items: center;
 }
 
-/* Define a animação de escrita */
-@keyframes typeAnimation {
-    from {
-        width: 0;
-        visibility: hidden;
-    }
-    to {
-        width: 100%;
-        visibility: visible;
-    }
-}
-
 .heroText {
     font-family: 'Jackpot', sans-serif;
     color: white;
@@ -101,66 +107,50 @@
     line-height: 1.6;
     text-transform: uppercase;
     white-space: nowrap;
+    display: inline-block; /* To allow the rocket to be next to line3 */
 }
 
-/* Aplica a animação de escrita a cada linha */
-.heroText span {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    visibility: hidden;
-    animation: typeAnimation 2s steps(20, end) forwards;
-}
 
-/* Atraso para que cada linha seja animada após a anterior */
-.heroText .line1 {
-    animation-delay: 0s;
-}
-.heroText .line2 {
-    animation-delay: 2s;
-}
 .heroText .line3 {
-    animation-delay: 4s;
+    display: inline-flex;
+    align-items: center;
 }
 
-/* Animação do foguete em zigue-zague */
-@keyframes zigzagMove {
+@keyframes rocketLaunch {
     0% {
-        transform: translate(0, 0);
+        transform: translate(-50%, 50%) rotate(0deg);
+        opacity: 0;
     }
-    25% {
-        transform: translate(-20px, -100px);
+    30% {
+        opacity: 1;
     }
     50% {
-        transform: translate(20px, -200px);
-    }
-    75% {
-        transform: translate(-20px, -300px);
+        transform: translate(0, -150px) rotate(45deg);
     }
     100% {
-        transform: translate(50px, -400px);
+        transform: translate(0, 0) rotate(35deg); 
     }
 }
 
 .heroFoguetinho {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    visibility: hidden;
-    z-index: 6;
-    animation: zigzagMove 4s ease-in-out forwards;
-    animation-delay: 6s;
+    margin-left: 8px;
+    width: 60px;
+    height: auto;
+    z-index: 5;
+    transform: rotate(35deg);
+    animation: rocketLaunch 1.5s ease-out forwards; /* Inicia a animação ao carregar */
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .heroText {
         font-size: 2rem;
         line-height: 1.4;
         margin-bottom: -30px;
+    }
+
+    .heroFoguetinho {
+        width: 40px; 
+        margin-left: 5px;
     }
 }
 
@@ -170,6 +160,11 @@
         line-height: 1.63;
         margin-bottom: -20px;
     }
+
+    .heroFoguetinho {
+        width: 40px; 
+        margin-left: 5px;
+    }
 }
 
 .heroKid {
@@ -178,4 +173,293 @@
     height: auto;
     object-fit: contain;
     z-index: 4;
+}
+
+.heroLua {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 6; /* Ensure it appears above other elements */
+    animation: float 2s ease-in-out infinite; /* Floating animation */
+    display: none; /* Initially hidden */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: translateY(-10px); /* Float up */
+        transform: rotate(2deg);
+    }
+}
+
+@media (min-width: 1024px) {
+    .heroLua {
+        display: block;
+    }
+}
+
+.heroPlanet {
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+    z-index: 6;
+    animation: floatPlanet 3s ease-in-out infinite; 
+    display: none; 
+    width: 150px;
+}
+
+@keyframes floatPlanet {
+    0%, 100% {
+        transform: translateY(0);
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: translateY(-8px); /* Flutua para cima */
+        transform: rotate(-2deg);
+    }
+}
+
+@media (min-width: 1024px) {
+    .heroPlanet {
+        display: block; 
+    }
+}
+
+.heroPhrases {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 4;
+    color: white;
+    font-family: "Lato", "sans-serif";
+    width: 100%;
+}
+
+.heroPhrase1 {
+    font-weight: lighter;
+    letter-spacing: 1.3rem; 
+    font-size: .8rem;
+    margin-bottom: 10px;
+    font-family: "Arial", "sans-serif";
+}
+
+.heroPhrase2 {
+    font-size: 1rem;
+    white-space: pre-wrap; /* Preserve line breaks */
+    font-family: "Lato", "sans-serif";
+    letter-spacing: 2px;
+    line-height: 1.3rem;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+.heroPhrase2:hover {
+    color: #ffcc00; /* Change to a bright yellow color on hover */
+}
+
+
+@media (max-width: 768px) {
+    .heroPhrase1 {
+        font-size: .8rem;
+        letter-spacing: 1.3rem;
+    }
+    
+    .heroPhrase2 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroPhrase1 {
+        font-size: 0.5rem;
+        letter-spacing: 0.6rem;
+    }
+    
+    .heroPhrase2 {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+}
+
+
+.heroText .line3 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.heroText .line1 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.starAndRocketContainer {
+    display: inline-flex;
+    align-items: center;
+    position: relative; /* Necessary to position stars relative to the text */
+}
+
+.heroStar {
+    position: absolute;
+    z-index: 7;
+    animation: pulse 2s ease-in-out infinite; /* Pulsating animation */
+    width: 25px;
+    transform-origin: center;
+}
+
+.star1 {
+    top: 20px;  
+    left: -450px; 
+}
+
+.star2 {
+    top: -190px; 
+    left: -180px; 
+}
+
+.star3 {
+    top: -120px; 
+    right: -40px; 
+}
+
+@media (max-width: 768px) {
+    .heroFoguetinho {
+        width: 50px; 
+        margin-left: 5px;
+    }
+
+    .heroStar {
+        width: 20px; 
+    }
+    .star1 {
+        top: 10px;  
+        left: -360px; 
+    }
+    .star2 {
+        top: -170px; 
+        left: -140px; 
+    }
+    .star3 {
+        top: -100px; 
+        right: -40px; 
+    }
+
+    .heroText {
+        line-height: 3.5rem;
+    }
+
+    .heroText .line3 {
+        display: inline-flex;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+    
+    .heroText .line1 {
+        display: inline-flex;
+        align-items: center;
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroFoguetinho {
+        width: 40px; /* Further adjust size */
+        margin-left: 5px;
+    }
+
+    .heroStar {
+        width: 15px;
+    }
+    .star1 {
+        top: 10px;  
+        left: -320px; 
+    }
+    .star2 {
+        top: -155px; 
+        left: -130px;
+    }
+    .star3 {
+        top: -100px; 
+        right: -30px; 
+    }
+    .heroText {
+        line-height: 3.5rem;
+    }
+
+    .heroText .line3 {
+        display: inline-flex;
+        align-items: center;
+        font-size: 2.1rem;
+    }
+
+    .heroText .line2 {
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.75rem;
+    }    
+    
+    .heroText .line1 {
+        display: inline-flex;
+        align-items: center;
+        font-size: 2.9rem;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+
+
+
+/* Diminuindo o min-height conforme a tela aumenta */
+@media (min-height: 750px) {
+    .body {
+        min-height: 90vh; /* Tela acima de 750px de altura */
+    }
+}
+
+@media (min-height: 900px) {
+    .body {
+        min-height: 90vh; /* Tela acima de 900px de altura */
+    }
+}
+
+@media (min-height: 1200px) {
+    .body {
+        min-height: 70vh; /* Tela acima de 1200px de altura */
+    }
+}
+
+/* Continuação para telas muito grandes */
+@media (min-height: 1500px) {
+    .body {
+        min-height: 60vh; /* Tela acima de 1500px de altura */
+    }
+}
+
+@media (min-height: 1800px) {
+    .body {
+        min-height: 50vh; /* Tela acima de 1800px de altura */
+    }
 }

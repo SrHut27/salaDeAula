@@ -1,0 +1,18 @@
+.custom-navbar {
+    background-color: #000; /* Fundo preto */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link,
+.custom-navbar .nav-dropdown {
+    color: #fff; /* Fonte branca */
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+    color: #ccc; /* Cor branca acinzentada ao passar o mouse */
+}
+
+.custom-navbar .navbar-nav {
+    justify-content: flex-end; /* Alinhar os links à esquerda */
+}
