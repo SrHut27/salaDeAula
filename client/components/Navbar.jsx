@@ -2,12 +2,17 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Image from 'next/image'; 
+import logo from '../public/logo.png'; 
 
 function NavbarLine() {
   return (
     <Navbar expand="lg" className="bg-black text-white custom-navbar">
       <Container>
-        <Navbar.Brand href="https://mariaperegrina.org.br/" className="text-white">Escola Maria Peregrina</Navbar.Brand>
+      <Navbar.Brand href="https://mariaperegrina.org.br/" className="text-white d-flex align-items-center">
+          <Image src={logo} alt="Logo" width={35} height={45} className="me-2" />
+          Escola Maria Peregrina
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0">
           <span className="navbar-toggler-icon" style={{ filter: 'invert(1)' }}></span>
         </Navbar.Toggle>

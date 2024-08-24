@@ -5,6 +5,7 @@ import Features from "../components/Features";
 import PosSection from "../components/PosSection";
 import Help from "../components/Help";
 import Footer from "../components/Footer";
+import FloatingBar from "../components/FloatingBar";
 
 
 export default function IndexPage() {
@@ -12,11 +13,12 @@ export default function IndexPage() {
         <>
         <NavbarLine />
         <Hero />
+        <Features />
         <Section />
         <PosSection />
-        <Features />
         <Help />
         <Footer />
+        <FloatingBar />
         </>
     )
 }

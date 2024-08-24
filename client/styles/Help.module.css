@@ -84,6 +84,10 @@
     font-size: 1rem;
     cursor: pointer;
   }
+
+  .link {
+    color: #fff;
+  }
   
   .ctaButton:hover {
     background-color: #3546d1;

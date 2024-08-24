@@ -21,16 +21,21 @@ function Footer() {
           <a href="https://www.facebook.com/escolamariaperegrina.sjrp" target="_blank" rel="noopener noreferrer">
             <FaFacebookF />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.link/hygqgj" target="_blank" rel="noopener noreferrer">
             <FaWhatsapp />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/escolamariaperegrina.sjrp/" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
         </div>
       </div>
       <div className={styles.bottomBar}>
         <p>&copy; 2024 sala.mariaperegrina.org. Todos os direitos reservados.</p>
+        <p>
+          Telefone: 17-988117301
+          E-mail: contato@mariaperegrina.org.br
+          Endereço: R. Francisco Rodrigues de Freitas, 184 - CECAP, São José do Rio Preto - SP, 15041-049
+      </p>
       </div>
     </footer>
   );

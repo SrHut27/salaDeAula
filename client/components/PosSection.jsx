@@ -22,7 +22,7 @@ function PosSection() {
           Pensado em acolher alunos da educação básica, música, esporte, cultura... um espaço para todos. Para além da imaginação!
         </p>
         <div className={styles.links}>
-          <a href="#" className={styles.link}>E você pode fazer parte dessa construção!</a>
+          <a href="#comoajudar" className={styles.link}>E você pode fazer parte dessa construção!</a>
         </div>
       </div>
     </section>
