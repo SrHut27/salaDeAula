@@ -30,9 +30,9 @@ function Footer() {
         </div>
       </div>
       <div className={styles.bottomBar}>
-        <p>&copy; 2024 sala.mariaperegrina.org. Todos os direitos reservados.</p>
+        <p>&copy; 2026 sala.mariaperegrina.org. Todos os direitos reservados.</p>
         <p>
-          Telefone: 17-988117301
+          Telefone: (17) 98811-7301
           E-mail: contato@mariaperegrina.org.br
           Endereço: R. Francisco Rodrigues de Freitas, 184 - CECAP, São José do Rio Preto - SP, 15041-049
       </p>
