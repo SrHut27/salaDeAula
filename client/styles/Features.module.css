@@ -6,7 +6,6 @@
   padding: 40px;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
   overflow: hidden;
   background: url("/images/features/background.png") no-repeat center center/cover;
 }
@@ -37,7 +36,9 @@
   text-align: center;
 }
 
-.text_title {
+/* ===== TÍTULOS (mantém Jackpot) ===== */
+.text_title,
+.text_title_right {
   color: #fff;
   margin-bottom: 15px;
   font-family: "Jackpot", sans-serif;
@@ -45,10 +46,6 @@
 }
 
 .text_title_right {
-  color: #fff;
-  margin-bottom: 15px;
-  font-family: "Jackpot", sans-serif;
-  line-height: 3rem;
   text-align: right;
 }
 
@@ -72,22 +69,24 @@
   font-size: 1.6rem;
 }
 
+/* ===== TEXTOS (LATO) ===== */
 .text_content {
-  font-size: 0.9rem;
+  font-family: 'Lato', sans-serif; /* agora direto */
+  font-size: 1.5rem;
   color: #fff;
-  line-height: 1.3;
+  line-height: 1.2;
   margin-bottom: 10%;
   text-align: left;
 }
-
 .text_content_right {
-  font-size: 0.9rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem; /* bem maior para testar */
   color: #fff;
-  line-height: 1.6;
+  line-height: 1.2;
   margin-bottom: 10%;
-  text-align: justify;
   text-align: right;
 }
+
 
 .column_image {
   margin-bottom: 15px;
@@ -95,27 +94,33 @@
 
 .rounded_image {
   border-radius: 15px;
-  border: 2px dotted white; /* Adiciona borda pontilhada branca */
+  border: 2px dotted white;
 }
 
+.mainTitle {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .features_content {
-      flex-direction: column;
-      align-items: center; /* Alinha tudo ao centro */
+    flex-direction: column;
+    align-items: center;
   }
 
   .column {
-      margin: 10px 0;
-      text-align: center; /* Alinha o texto ao centro */
+    margin: 10px 0;
+    text-align: center;
   }
 
   .column_image {
-      width: 300px; /* Aumenta o tamanho da imagem */
-      margin: 0 auto 15px;
-  }
-
-  .rounded_image {
-      border-radius: 15px;
-      border: 2px dotted white; /* Mantém a borda pontilhada branca */
+    width: 300px;
+    margin: 0 auto 15px;
   }
 }

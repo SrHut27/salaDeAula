@@ -3,18 +3,27 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'next/image'; 
-import logo from '../public/capanova.png'; 
+import logo from '../public/headermp.png'; 
 
 function NavbarLine() {
   return (
-    <Navbar expand="lg" className="bg-black text-white custom-navbar">
+    <Navbar expand="lg" className="bg-black text-white custom-navbar py-3">
       <Container>
         <Navbar.Brand
           href="https://mariaperegrina.org.br/"
           className="text-white d-flex align-items-center fonte-navbar brand-navbar"
         >
-          <Image src={logo} alt="capa" width={55} height={65} className="me-2" />
-          Escola Maria Peregrina
+          <Image
+            src={logo}
+            alt="Logo Maria Peregrina"
+            width={90}         // ← Aumenta a largura da logo
+            height={80}        // ← Aumenta a altura da logo
+            className="me-3"   // ← Espaço maior entre logo e texto
+            priority           // ← Garante que a logo carregue rápido
+          />
+          <span style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
+            Escola Maria Peregrina
+          </span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0">
@@ -38,18 +47,14 @@ function NavbarLine() {
               title={<span className="text-white">Saiba Mais</span>}
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="https://mariaperegrina.org.br/escola/sustentabilidade-socio-ambiental">
+              <NavDropdown.Item href="https://mariaperegrina.org.br/">
                 Quem somos
-              </NavDropdown.Item>
-
-              <NavDropdown.Item href="https://mariaperegrina.org.br/seja-amigo/sustentabilidade-socio-ambiental">
-                Outros projetos
               </NavDropdown.Item>
 
               <NavDropdown.Divider />
 
               <NavDropdown.Item href="#comoajudar">
-                Como ajudar?
+                Como ajudar
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

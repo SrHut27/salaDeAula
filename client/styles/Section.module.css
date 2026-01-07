@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'DMSans';
-  src: url('/fonts/DMSans-Regular.ttf') format('woff2');
+  src: url('/fonts/DMSans-Regular.ttf') format('truetype'); /* corrigido: formato correto */
   font-weight: normal;
   font-style: normal;
 }
@@ -21,7 +21,7 @@
 .quoteTop {
   position: absolute;
   top: 0px;
-  left:5px;
+  left: 5px;
   width: 50px;
   opacity: 65%;
 }
@@ -75,7 +75,6 @@
   }
 }
 
-
 .imageWrapper {
   border-radius: 15px;
   overflow: hidden;
@@ -99,7 +98,7 @@
 
 .mainTitle {
   color: #222;
-  font-size: 2rem;
+  font-size: 2rem; /* corrigido: sem espaço extra */
   font-weight: bold;
   line-height: 1.3;
   max-width: 70%;
@@ -107,85 +106,11 @@
   text-align: center;
 }
 
-.break {
-  display: block;
-}
-
 .description {
-  margin-top: 40px;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
-  max-width: 900px;
+  font-size: 1.2rem; /* tamanho ajustável */
+  line-height: 1.6;
+  color: #333;
+  margin-top: 20px;
+  max-width: 80%;
   text-align: justify;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 768px) {
-  .mainTitle {
-    color: #222;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    max-width: 100%;
-  }
-  .missionTitle {
-    font-size: 1.5rem;
-    margin-bottom: 0px;
-  }
-}
-
-@media (max-width: 640px) {
-  .imageOne {
-    margin-top: 10px;
-    margin-left: 50px;
-  }
-  
-  .imageTwo {
-    margin-top: -20px;
-    margin-right: 50px;
-  }
-  
-  .imageThree {
-    margin-top: -20px;
-    margin-left: 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mainTitle {
-    color: #222;
-    font-size: 1rem;
-    font-weight: bold;
-    max-width: 100%;
-    margin-bottom: 20px;
-    line-height: 1.2;
-  }
-
-  .missionTitle {
-    font-size: 1.8rem;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .imageOne {
-    margin-top: 10px;
-    margin-left: 0px;
-  }
-  
-  .imageTwo {
-    margin-top: -20px;
-    margin-right: 0px;
-  }
-  
-  .imageThree {
-    margin-top: -20px;
-    margin-left: 0px;
-  }
-  
 }

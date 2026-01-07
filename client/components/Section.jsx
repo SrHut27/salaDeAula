@@ -1,6 +1,12 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from '../styles/Section.module.css';
+import { Yeseva_One } from 'next/font/google';
+
+const yeseva = Yeseva_One({
+  subsets: ['latin'],
+  weight: '400', // Yeseva One só possui 400
+});
 
 function CampaignSection() {
   const sectionRef = useRef(null);
@@ -63,12 +69,13 @@ function CampaignSection() {
             />
           </div>
         </div>
-        <h2 className={styles.mainTitle}>
+        <h2 className={`${styles.mainTitle} ${yeseva.className}`}>
           A pedagogia Maria Peregrina não exige salas de aula,
           mas apenas UMA ÚNICA SALA!
         </h2>
+
         <p className={styles.description}>
-        A Escola Maria Peregrina está há 18 anos em São José do Rio Preto -SP e tem 20 anos de fundação. Atualmente a escola possui a necessidade de expandir para continuar seu trabalho com o desenvolvimento integral do aluno e transformação da família que é o seu primeiro aluno. Muitos alunos típicos e atípicos teve um alto desenvolvimento devido à única sala de aula: o pátio pedagógico. Por isso, temos a necessidade em construir uma nova sala de aula mais ampla e mais avançada, a fim de melhor atender nossos alunos.  
+          A Escola Maria Peregrina está há 18 anos em São José do Rio Preto -SP e tem 20 anos de fundação. Atualmente a escola possui a necessidade de expandir para continuar seu trabalho com o desenvolvimento integral do aluno e transformação da família que é o seu primeiro aluno. Muitos alunos típicos e atípicos teve um alto desenvolvimento devido à única sala de aula: o pátio pedagógico. Por isso, temos a necessidade em construir uma nova sala de aula mais ampla e mais avançada, a fim de melhor atender nossos alunos.
         </p>
       </div>
     </section>

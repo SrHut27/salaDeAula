@@ -23,7 +23,7 @@
 
 .backgroundImage {
   width: 100%;
-  max-width: 400px;
+  max-width: 250px;
 }
 
 .overlayImage {
@@ -60,11 +60,16 @@
 }
 
 .description {
-  font-size: calc(12px + 0.5vw);
+  font-family: 'Lato', sans-serif; /* aqui aplicamos Lato */
+  font-size: 1.7rem;
   color: #555;
-  margin-bottom: 2vw;
-  text-align: center;
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: justify;
+  max-width: 800px;
 }
+
 
 .links {
   font-size: calc(12px + 0.5vw);
@@ -117,11 +122,11 @@
   }
 
   .description {
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(16px + 0.5vw);
   }
 
   .link {
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(12px + 0.5vw);
   }
 }
 
@@ -131,14 +136,14 @@
   }
 
   .title {
-    font-size: calc(16px + 1vw);
+    font-size: calc(18px + 1vw);
   }
 
   .description {
-    font-size: calc(8px + 0.5vw);
+    font-size: calc(16px + 0.5vw);
   }
 
   .link {
-    font-size: calc(8px + 0.5vw);
+    font-size: calc(15px + 0.5vw);
   }
 }

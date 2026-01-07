@@ -1,13 +1,32 @@
 import styles from '../styles/Footer.module.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { Yeseva_One, Lato } from 'next/font/google';
+
+// Importando a fonte Yeseva One
+const yeseva = Yeseva_One({
+  subsets: ['latin'],
+  weight: '400', // único peso disponível
+});
+
+// Importando a fonte Lato
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700'], // pesos comuns
+});
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <h1>Escola Maria Peregrina</h1>
-          <p>Transformando vidas através da educação.</p>
+          {/* Título com Yeseva One */}
+          <h1 className={`${styles.footerTitle} ${yeseva.className}`}>
+            Escola Maria Peregrina
+          </h1>
+          {/* Texto com Lato */}
+          <p className={lato.className}>
+            Transformando vidas através da educação.
+          </p>
         </div>
         <nav className={styles.nav}>
           <ul>
@@ -30,12 +49,15 @@ function Footer() {
         </div>
       </div>
       <div className={styles.bottomBar}>
-        <p>&copy; 2026 sala.mariaperegrina.org. Todos os direitos reservados.</p>
-        <p>
-          Telefone: (17) 98811-7301
-          E-mail: contato@mariaperegrina.org.br
+        {/* Textos da bottomBar com Lato */}
+        <p className={lato.className}>
+          &copy; 2026 sala.mariaperegrina.org Todos os direitos reservados.
+        </p>
+        <p className={lato.className}>
+          Telefone: (17) 98811-7301<br />
+          E-mail: contato@mariaperegrina.org.br<br />
           Endereço: R. Francisco Rodrigues de Freitas, 184 - CECAP, São José do Rio Preto - SP, 15041-049
-      </p>
+        </p>
       </div>
     </footer>
   );
