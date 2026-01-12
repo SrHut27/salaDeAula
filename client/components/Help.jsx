@@ -25,8 +25,8 @@ const Help = () => {
 
     {/* Parágrafo inicial com Lato */}
 <p className={`${styles.description} ${lato.className}`}>
-  Se você gostou desse projeto e gostaria de fazer parte dele, <a href="#comoajudar">faça sua contribuição!</a> Toda ajuda é bem-vinda e essencial para construirmos juntos a Maior Sala de Aula do Mundo.  
-  Acompanhe o andamento e as etapas da construção pelo Instagram: @missoes.mariaperegrina e @escolamariaperegrina.sjrp.
+  Se você gostou desse projeto e gostaria de fazer parte dele, <a href="#comoajudar">faça sua contribuição!</a> Toda ajuda é essencial para que possamos construir a Maior Sala de Aula do Mundo.  
+  Acompanhe o andamento e as etapas da construção pelo Instagram: <a href="https://www.instagram.com/missoes.mariaperegrina/">@missoes.mariaperegrina</a> e <a href="https://www.instagram.com/escolamariaperegrina.sjrp/">@escolamariaperegrina.sjrp</a>
 </p>
 
 
@@ -66,21 +66,18 @@ const Help = () => {
         <div className={styles.optionCard}>
           {/* Subtítulo com Yeseva One */}
           <h3 className={`${styles.cardTitle} ${yeseva.className}`}>
-            Você que é empresário
+            Você é empresário?
           </h3>
 
           {/* Parágrafo do card com Lato */}
           <p className={`${styles.cardDescription} ${lato.className}`}>
-            Convidamos você, empresário e empresária, que gostaram do projeto, a nos conhecer de perto! 
-            Entre em contato conosco pelo celular: (17) 988117301.
+            Convidamos você, empresário, que gostou desse projeto a nos conhecer de perto! Entre em contato pelo celular: (17) 988117301.
           </p>
 
           <ul className={styles.featuresList}>
-            <b><li>A Maior</li></b>
-            <b><li>Sala de Aula</li></b>
-            <b><li>Do Mundo</li></b>
-            <li>Ajude-nos a inquietar o mundo pela educação!</li>
-            <li>Tire todas as suas dúvidas, faça uma visita em nossa escola!</li>
+            <b><li>A Maior Sala de Aula do Mundo</li></b>
+            <li>Ajude a inquietar o mundo pela educação!</li>
+            <li>Faça uma visita em nossa escola!</li>
             <li>Entre em contato:</li>
           </ul>
 

@@ -27,18 +27,16 @@ function PosSection() {
         
         {/* Aqui aplicamos Yeseva One no título */}
         <h2 className={`${styles.title} ${yeseva.className}`}>
-          A maior sala de aula não é apenas um grande lugar. 
-          É um lugar para caber a todos!
+          A maior sala de aula não é apenas um grande lugar. É o lugar para caber a todos!
         </h2>
         
         <p className={styles.description}>
-          Pensado em acolher alunos da educação básica, música, esporte, cultura... 
-          um espaço para todos. Para além da imaginação!
+          Pensado para acolher alunos da educação infantil e básica, as aulas de música, esporta e cultura, a maior sala de aula do mundo é um espaço para todos e para além da imaginação.
         </p>
-        
+
         <div className={styles.links}>
           <a href="#comoajudar" className={styles.link}>
-            E você pode fazer parte dessa construção!
+            Você pode fazer parte dessa construção!
           </a>
         </div>
       </div>
