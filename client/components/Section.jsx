@@ -61,8 +61,8 @@ function CampaignSection() {
           </div>
           <div className={`${styles.imageWrapper} ${styles.imageThree}`}>
             <Image
-              src="/images/section/section_3.png"
-              alt="Image 3"
+              src="/images/section/um.png"
+              alt="Image (3)"
               width={300}
               height={200}
               className={styles.image}

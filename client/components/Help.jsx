@@ -71,7 +71,7 @@ const Help = () => {
 
           {/* Parágrafo do card com Lato */}
           <p className={`${styles.cardDescription} ${lato.className}`}>
-            Convidamos você, empresário, que gostou desse projeto a nos conhecer de perto! Entre em contato pelo celular: (17) 988117301.
+            Convidamos você que gostou desse projeto a nos conhecer de perto! Entre em contato pelo celular: (17) 988117301.
           </p>
 
           <ul className={styles.featuresList}>

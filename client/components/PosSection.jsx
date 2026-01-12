@@ -31,7 +31,7 @@ function PosSection() {
         </h2>
         
         <p className={styles.description}>
-          Pensado para acolher alunos da educação infantil e básica, as aulas de música, esporta e cultura, a maior sala de aula do mundo é um espaço para todos e para além da imaginação.
+          Para acolher as aulas curriculares as aulas de música, esporte e cultura, a maior sala de aula do mundo é um espaço para todos e para além da imaginação.
         </p>
 
         <div className={styles.links}>
