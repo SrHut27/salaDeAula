@@ -25,7 +25,7 @@ const Help = () => {
 
     {/* Parágrafo inicial com Lato */}
 <p className={`${styles.description} ${lato.className}`}>
-  Se você gostou desse projeto e gostaria de fazer parte dele, <a href="#comoajudar">faça sua contribuição!</a> Toda ajuda é essencial para que possamos construir a Maior Sala de Aula do Mundo.  
+  Se você gostou desse projeto e gostaria de fazer parte dele, faça sua contribuição! Toda ajuda é essencial para que possamos construir a Maior Sala de Aula do Mundo.  
   Acompanhe o andamento e as etapas da construção pelo Instagram: <a href="https://www.instagram.com/missoes.mariaperegrina/">@missoes.mariaperegrina</a> e <a href="https://www.instagram.com/escolamariaperegrina.sjrp/">@escolamariaperegrina.sjrp</a>
 </p>
 
@@ -71,7 +71,7 @@ const Help = () => {
 
           {/* Parágrafo do card com Lato */}
           <p className={`${styles.cardDescription} ${lato.className}`}>
-            Convidamos você que gostou desse projeto a nos conhecer de perto! Entre em contato pelo celular: (17) 988117301.
+            Convidamos você que gostou desse projeto a nos conhecer de perto! Entre em contato pelo celular: (17) 98811-7301.
           </p>
 
           <ul className={styles.featuresList}>

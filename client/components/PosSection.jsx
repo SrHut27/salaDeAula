@@ -14,7 +14,7 @@ function PosSection() {
       <div className={styles.leftContent}>
         <div className={styles.backgroundImage}>
           <Image 
-            src="/images/possection/bg-variety.png" 
+            src="/images/possection/mosaicoescola.png" 
             alt="Background Image" 
             layout="responsive" 
             width={500} 

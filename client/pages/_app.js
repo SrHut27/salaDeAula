@@ -1,23 +1,24 @@
 import "../styles/global.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Lato } from 'next/font/google';
+import { Lato, Yeseva_One } from 'next/font/google';
 
-// Carregando a fonte Lato
+// Fonte Lato (texto geral)
 const lato = Lato({
   subsets: ['latin'],
-  weight: ['400', '700'], // pesos que você quer usar
+  weight: ['400', '700'],
+  variable: '--font-lato',
 });
 
-import { Yeseva_One } from 'next/font/google';
-
+// Fonte Yeseva One (títulos)
 const yeseva = Yeseva_One({
   subsets: ['latin'],
-  weight: '400', // Yeseva One só tem peso 400
+  weight: '400',
+  variable: '--font-yeseva',
 });
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main className={lato.className}>
+    <main className={`${lato.variable} ${yeseva.variable}`}>
       <Component {...pageProps} />
     </main>
   );

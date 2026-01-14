@@ -6,6 +6,7 @@ import PosSection from "../components/PosSection";
 import Help from "../components/Help";
 import Footer from "../components/Footer";
 import FloatingBar from "../components/FloatingBar";
+import NovoSection from "../components/NovoSection";
 
 
 export default function IndexPage() {
@@ -15,6 +16,7 @@ export default function IndexPage() {
         <Hero />
         <Features />
         <Section />
+        <NovoSection />
         <PosSection />
         <Help />
         <Footer />
