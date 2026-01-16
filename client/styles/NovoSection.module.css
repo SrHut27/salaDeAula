@@ -34,3 +34,28 @@
 .content p {
   font-family: var(--font-lato), sans-serif;
 }
+
+@media (max-width: 768px) {
+  .novaSection {
+    flex-direction: column;   /* imagem em cima, texto embaixo */
+    height: auto;             /* evita corte vertical */
+    gap: 24px;
+  }
+
+  .carousel {
+    width: 100%;
+    min-height: auto;         /* remove altura fixa */
+    overflow: hidden;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;      /* imagem inteira visível */
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: left;
+  }
+}

@@ -5,6 +5,9 @@ class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
+          {/* Viewport (OBRIGATÓRIO para mobile) */}
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
           {/* Favicon */}
           <link rel="icon" type="image/png" href="/logomp.png" />
 
