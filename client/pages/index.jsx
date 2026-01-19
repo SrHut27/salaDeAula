@@ -20,14 +20,14 @@ export default function IndexPage() {
         {/* SEO básico */}
         <meta
           name="description"
-          content="Projeto da Maior Sala de Aula do Mundo. Faça parte desse progresso."
+          content="Nossa pedagogia precisa de apenas uma sala de aula! Nos ajude a construí-la!"
         />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Maior Sala de Aula do Mundo" />
+        <meta property="og:title" content="A Maior Sala de Aula do Mundo" />
         <meta
           property="og:description"
-          content="Ajude na construção da Maior Sala de Aula do Mundo."
+          content="Nossa pedagogia precisa de apenas uma sala de aula! Nos ajude a construí-la!"
         />
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:type" content="website" />
