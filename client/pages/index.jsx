@@ -32,8 +32,8 @@ export default function IndexPage() {
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:type" content="website" />
 
-        {/* 🔥 FAVICON (ESSENCIAL) */}
-        <link rel="icon" href="/favicon.ico" />
+         {/* 🔥 FAVICON (ESSENCIAL) */}
+        <link rel="icon" href="/vertenteimg.png" />
       </Head>
 
       <NavbarLine />
